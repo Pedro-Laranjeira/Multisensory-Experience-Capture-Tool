@@ -1,0 +1,15 @@
+.capture-media-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 65vh;
+    /* Keep the whole photo proportional when the viewport height caps its box. */
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+}
+
+.capture-media-error { padding: 1rem; background: #f4f2ed; color: #433e35; border-radius: 8px; overflow-wrap: anywhere; }
+.capture-media-image[hidden], audio[hidden], video[hidden] { display: none; }

@@ -1,0 +1,279 @@
+{
+  "title": "Spatial and Multisensory Urban Experience",
+  "pages": [
+    {
+      "name": "participant_information",
+      "title": "Participant Information",
+      "elements": [
+        {
+          "type": "dropdown",
+          "name": "p1_idade",
+          "title": "Age Range",
+          "isRequired": true,
+          "choices": [
+            "Under 18",
+            "18-24",
+            "25-34",
+            "35-44",
+            "45-54",
+            "55-64",
+            "65 or older"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "p1_genero",
+          "title": "Gender",
+          "isRequired": true,
+          "choices": [
+            "Female",
+            "Male",
+            "Non-binary",
+            "Prefer not to say"
+          ],
+          "showOtherItem": true,
+          "otherText": "Self-describe"
+        },
+        {
+          "type": "text",
+          "name": "p1_nacionalidade",
+          "title": "Nationality"
+        },
+        {
+          "type": "dropdown",
+          "name": "p1_relacao_espaco",
+          "title": "How would you describe your relationship with this place?",
+          "isRequired": true,
+          "choices": [
+            "I have never been here before",
+            "I have visited a few times",
+            "I visit occasionally",
+            "I visit regularly",
+            "I am a local resident / I work here"
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "rating",
+          "name": "p1_familiaridade",
+          "title": "How familiar are you with this place?",
+          "minRateDescription": "Not familiar at all",
+          "maxRateDescription": "Very familiar"
+        },
+        {
+          "type": "radiogroup",
+          "name": "p1_sensibilidade",
+          "title": "Do you identify as having any sensory sensitivities or specific accessibility needs that may influence your experience in this space?",
+          "isRequired": false,
+          "choices": [
+            "No",
+            "Prefer not to say"
+          ],
+          "showOtherItem": true,
+          "otherText": "Yes (Please describe)"
+        },
+        {
+          "type": "rating",
+          "name": "p1_tecnologia",
+          "title": "How comfortable do you feel using digital technologies?",
+          "minRateDescription": "Not comfortable",
+          "maxRateDescription": "Very comfortable"
+        },
+        {
+          "type": "dropdown",
+          "name": "p1_natureza",
+          "title": "How frequently do you engage with natural environments?",
+          "choices": [
+            "Daily",
+            "Weekly",
+            "Monthly",
+            "Rarely",
+            "Never"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "__capture_template__",
+      "title": "Captured Moment",
+      "elements": [
+        {
+          "type": "html",
+          "name": "media_preview",
+          "visible": false,
+          "html": "<div style='padding:15px;border:1px solid #ccc;border-radius:8px;background:#fafafa;text-align:center;'><strong>Media Preview</strong><br><br><em>(Photo, audio or video will appear here after synchronization.)</em></div>"
+        },
+        {
+          "type": "html",
+          "name": "capture_info",
+          "html": "<div style='margin-top:10px;padding:10px;background:#f4f4f4;border-radius:6px;'><strong>Capture Information</strong><br>Media Type: --<br>Capture Time: --<br>GPS Location: --</div>"
+        },
+        {
+          "type": "text",
+          "name": "captureId",
+          "visible": false
+        },
+        {
+          "type": "text",
+          "name": "mediaType",
+          "visible": false
+        },
+        {
+          "type": "text",
+          "name": "filename",
+          "visible": false
+        },
+        {
+          "type": "text",
+          "name": "timestamp",
+          "visible": false
+        },
+        {
+          "type": "text",
+          "name": "latitude",
+          "visible": false
+        },
+        {
+          "type": "text",
+          "name": "longitude",
+          "visible": false
+        },
+        {
+          "type": "checkbox",
+          "name": "c_sentidos",
+          "title": "Which senses or dimensions were most relevant to this experience?",
+          "isRequired": true,
+          "choices": [
+            "Sight (Scenery, light, colors, architecture)",
+            "Hearing (Urban sounds, nature, birdsongs)",
+            "Smell (Environmental odors, vegetation, pollution)",
+            "Touch / Thermal (Wind, temperature, textures)",
+            "Body Awareness / Movement",
+            "Ecological Dimension (Encounters with animals/plants)",
+            "Emotional Response"
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "c_tipo_estimulo",
+          "title": "What was the primary source of this sensation?",
+          "choices": [
+            "Human Elements (Crowds, traffic, behaviours)",
+            "Natural / More-than-Human Elements (Species, vegetation, water)",
+            "Material / Atmospheric Elements (Weather, shadows, ground materials)"
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "c_metricas",
+          "title": "Moment Evaluation",
+          "columns": [
+            {
+              "value": 1,
+              "text": "Very Low"
+            },
+            {
+              "value": 2,
+              "text": "Low"
+            },
+            {
+              "value": 3,
+              "text": "Moderate"
+            },
+            {
+              "value": 4,
+              "text": "High"
+            },
+            {
+              "value": 5,
+              "text": "Very High"
+            }
+          ],
+          "rows": [
+            {
+              "value": "intensity",
+              "text": "Stimulus intensity"
+            },
+            {
+              "value": "comfort",
+              "text": "Level of comfort"
+            },
+            {
+              "value": "emotional",
+              "text": "Emotional impact"
+            },
+            {
+              "value": "ecological",
+              "text": "Ecological relevance"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "c_representatividade",
+          "title": "How accurately does the recorded media represent what you actually experienced?",
+          "minRateDescription": "Very poorly",
+          "maxRateDescription": "Very accurately"
+        },
+        {
+          "type": "comment",
+          "name": "c_nota_aberta",
+          "title": "Why did you decide to capture this moment? What aspects of your experience are not fully represented by the recorded media?"
+        }
+      ]
+    },
+    {
+      "name": "overall_experience",
+      "title": "Overall Experience",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "g_engajamento",
+          "title": "How engaged or focused did you feel during the urban activity?",
+          "minRateDescription": "Not engaged",
+          "maxRateDescription": "Fully engaged"
+        },
+        {
+          "type": "rating",
+          "name": "g_percecao_mudanca",
+          "title": "Did this experience make you notice aspects of the space that you would normally overlook (e.g., natural rhythms, accessibility barriers)?",
+          "minRateDescription": "Not at all",
+          "maxRateDescription": "Significantly"
+        },
+        {
+          "type": "comment",
+          "name": "g_impacto_ferramenta",
+          "title": "In what ways did the act of pausing to capture moments alter or influence your overall perception of the surrounding ecosystem?",
+          "rows": 3
+        },
+        {
+          "type": "rating",
+          "name": "g_carga_cognitiva",
+          "title": "Did you experience any overstimulation, fatigue, or distraction caused by handling the capture device in the field?",
+          "minRateDescription": "None",
+          "maxRateDescription": "Very High"
+        }
+      ]
+    },
+    {
+      "name": "final_reflections",
+      "title": "Final Reflections",
+      "elements": [
+        {
+          "type": "comment",
+          "name": "f_exclusao",
+          "title": "Looking at the space you explored: who (or which species) do you think is excluded from using this location comfortably?",
+          "rows": 3
+        },
+        {
+          "type": "comment",
+          "name": "f_nao_capturado",
+          "title": "Was there any prominent sensation (a strong smell, a sudden change in temperature, etc.) that you felt but were unable to capture?",
+          "rows": 2
+        }
+      ]
+    }
+  ],
+  "showProgressBar": true
+}
